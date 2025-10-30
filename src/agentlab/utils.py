@@ -7,13 +7,6 @@ def greet(name: str) -> str:
     return f"Hello, {name}!"
 
 
-def deprecated_sum(nums: Iterable[int]) -> int:
-    """Intentionally oddly-named function to encourage refactor/rename.
-
-
-    Also contains a minor code smell (manual loop) for the agent to modernize.
-    """
-    total = 0
-    for n in nums:
-        total = total + n
-    return total
+def sum_ints(nums: Iterable[int]) -> int:
+    """Sum a sequence of integers using built-in sum()."""
+    return sum(nums)

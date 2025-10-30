@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from agentlab.utils import greet, deprecated_sum
+from agentlab.utils import greet, sum_ints
 from agentlab.data_loader import process_data
 from agentlab.api_client import ApiClient
 
@@ -10,8 +10,7 @@ def main() -> int:
     print(greet("World"))  # intentionally uses print (to refactor to logging)
     client = ApiClient(base_url="https://example.com")
     # NOTE: ApiClient.get_json currently lacks retries/backoff. See SCENARIOS.
-    combined = deprecated_sum([1, 2, 3]) + process_data([1, 2, 3])
-    # NOTE: 'deprecated_sum' is intentionally named to trigger a refactor scenario.
+    combined = sum_ints([1, 2, 3]) + process_data([1, 2, 3])
     print(f"Combined={combined}")
     return 0
 

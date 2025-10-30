@@ -13,9 +13,17 @@ def normalize(n: int) -> int:
 def process_data(values: Iterable[int]) -> int:
     """Process a list of integers by normalizing and summing.
 
+    Args:
+        values: An iterable of integers to process.
 
-    NOTE: There is a subtle bug possibility if values is None; add validation later.
+    Returns:
+        The sum of normalized values.
+
+    Raises:
+        ValueError: If values is None.
     """
+    if values is None:
+        raise ValueError("values must be an iterable of ints")
     total = 0
     for v in values:
         total += normalize(v)

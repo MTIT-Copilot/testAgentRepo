@@ -1,9 +1,9 @@
-from agentlab.utils import greet, deprecated_sum
+from agentlab.utils import greet, sum_ints
 
 
 def test_greet():
     assert greet("Tayyab") == "Hello, Tayyab!"
 
 
-def test_deprecated_sum():
-    assert deprecated_sum([1, 2, 3]) == 6
+def test_sum_ints():
+    assert sum_ints([1, 2, 3]) == 6

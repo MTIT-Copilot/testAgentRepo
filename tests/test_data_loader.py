@@ -1,5 +1,6 @@
 import pytest
-from agentlab.data_loader import process_data, normalize
+
+from agentlab.data_loader import normalize, process_data
 
 
 def test_normalize_basic():

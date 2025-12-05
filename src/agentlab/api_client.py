@@ -48,7 +48,7 @@ class ApiClient:
             - Retry 2: backoff_factor * 2^1 = 2.0 seconds (default)
             - Retry 3: backoff_factor * 2^2 = 4.0 seconds (default)
         """
-        url = f"{self.base_url}/{path.lstrip('/') }"
+        url = f"{self.base_url}/{path.lstrip('/')}"
         last_exception = None
 
         for attempt in range(self.max_retries + 1):

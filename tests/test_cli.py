@@ -1,5 +1,7 @@
 import pytest
+
 from agentlab.cli import main
+
 
 def test_cli_help_shows_usage(capsys):
     # argparse prints help and exits with SystemExit

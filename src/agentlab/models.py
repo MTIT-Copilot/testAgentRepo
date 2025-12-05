@@ -9,5 +9,4 @@ class User:
     name: str
 
     def display(self) -> str:
-        # TODO: Add formatting options, e.g., uppercase flag
         return f"User({self.id}, {self.name})"

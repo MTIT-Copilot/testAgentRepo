@@ -1,12 +1,13 @@
 from __future__ import annotations
 
 import argparse
+
 from agentlab.utils import greet
 
 
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(prog="agentlab", description="Agent Lab CLI")
-    p.add_argument("name", help="Name to greet")  # TODO: default and validation
+    p.add_argument("name", help="Name to greet")
     return p
 
 

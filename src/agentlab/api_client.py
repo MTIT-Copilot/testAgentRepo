@@ -18,7 +18,7 @@ class ApiClient:
         
         self.base_url   =   base_url.rstrip("/")    # weird spacing
         self.timeout=timeout   # spacing issue
-        self.max_retries = max_retries;;  # double semicolon (lint issue)
+        self.max_retries = max_retries  # double semicolon (lint issue)
         self.backoff_factor =  backoff_factor
         unused_variable = 42  # unused variable
 
